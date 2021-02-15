@@ -161,8 +161,7 @@
           <div class="right-content">
             <h1>Get Discount <span>30%</span> Off</h1>
             <p>
-              Sign up to our blogletter and save 30% for you next purchase. No
-              spam, we promise!
+              Sign up to our Newsletter and save 30% for you next purchase.
             </p>
             <form action="#">
               <input
