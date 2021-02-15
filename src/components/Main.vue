@@ -146,6 +146,36 @@
         </div>
       </div>
     </div>
+    <!-- PopUp -->
+    <div class="popup">
+      <div class="popup-content">
+        <div class="popup-close">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="popup-left">
+          <div class="popup-img">
+            <img src="../assets/grid_1.jpg" alt="popup" />
+          </div>
+        </div>
+        <div class="popup-right">
+          <div class="right-content">
+            <h1>Get Discount <span>30%</span> Off</h1>
+            <p>
+              Sign up to our blogletter and save 30% for you next purchase. No
+              spam, we promise!
+            </p>
+            <form action="#">
+              <input
+                type="email"
+                placeholder="Enter your email..."
+                class="popup-form"
+              />
+              <a href="#">Subscribe</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -178,11 +208,26 @@ export default {
     });
 
     glide.mount();
+
+    // PopUp
+    const popup = document.querySelector(".popup");
+    const closePopup = document.querySelector(".popup-close");
+
+    closePopup.addEventListener("click", () => {
+      popup.classList.remove("show");
+    });
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        popup.classList.add("show");
+      }, 500);
+    });
   },
 };
 </script>
 
 <style scoped>
+
 img {
   padding: 0 !important;
 }
@@ -211,11 +256,11 @@ hr {
   transition: all 300ms ease-in-out;
 }
 .title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 /* 
 .image {
@@ -364,6 +409,28 @@ hr {
   padding: 0 !important;
 }
 
+@media screen and (min-width: 1920px) {
+  * {
+    padding: 0 12px;
+  }
+  .glide__arrow {
+    top: -150px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  * {
+    padding: 0 14px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .brands li img {
+    height: 9rem;
+  }
+  * {
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width: 996px) {
   .gallary-item .content h2 {
     font-size: 1.6rem;
@@ -380,6 +447,9 @@ hr {
     top: -160px;
     padding: 1rem 1rem;
   }
+  * {
+    padding: 0;
+  }
 
   .gallary-item .content h2 {
     font-size: 1.4rem;
@@ -392,6 +462,9 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
+  * {
+    padding: 0;
+  }
   .gallary {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(20, 4vw);
@@ -429,28 +502,10 @@ hr {
   object-fit: contain;
   height: 12rem;
 }
-@media screen and (min-width: 1920px) {
-  * {
-    padding: 0 12px;
-  }
-  .glide__arrow {
-    top: -150px;
-  }
-}
-@media screen and (min-width: 1366px) {
-  * {
-    padding: 0 14px;
-  }
-}
-@media only screen and (max-width: 567px) {
-  .brands li img {
-    height: 9rem;
-  }
-}
 
 .facility {
   background-color: var(--grey-alt);
-  padding: 6rem 0;
+  padding: 6rem 0 !important;
 }
 
 .facility-contianer {
@@ -537,6 +592,220 @@ Facility Media Query
 
   .facility-contianer p {
     font-size: 1.4rem;
+  }
+}
+
+/* ======= Popup ======== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  transition: 0.3s;
+  transform: scale(0.2);
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+}
+
+.popup.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  margin: 0 auto;
+  height: 55rem;
+  transform: translate(-50%, -50%);
+  padding: 1.6rem;
+  display: table;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 1.5rem 1.7rem;
+  background-color: var(--grey-alt);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popup-left {
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.popup-right {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding: 3rem 5rem;
+}
+
+.popup-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.popup-img img {
+  display: block;
+  width: 60rem;
+  height: 45rem;
+  max-width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.right-content {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.right-content h1 {
+  font-size: 4rem;
+  color: var(--black);
+  margin-bottom: 1.6rem;
+}
+
+.right-content h1 span {
+  color: var(--green);
+}
+
+.right-content p {
+  font-size: 1.8rem;
+  color: var(--grey2);
+  margin-bottom: 1.6rem;
+}
+
+.popup-form {
+  width: 100%;
+  padding: 2rem 0;
+  text-indent: 1rem;
+  margin-bottom: 1.6rem;
+  border-radius: 3rem;
+  background-color: var(--grey-alt);
+  border: none;
+}
+
+.popup-form:focus {
+  outline: none;
+}
+
+.right-content a:link,
+.right-content a:visited {
+  display: inline-block;
+  padding: 1.8rem 5rem;
+  border-radius: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--grey2);
+  transition: 0.3s;
+}
+
+.right-content a:hover {
+  background-color: var(--green);
+  border: 1px solid var(--grey2);
+  color: var(--black);
+}
+
+@media only screen and (max-width: 1200px) {
+  .right-content {
+    width: 100%;
+  }
+
+  .right-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  .popup-right {
+    width: 100%;
+  }
+
+  .popup-left {
+    display: none;
+  }
+
+  .right-content h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .right-content h1 {
+    font-size: 4rem;
+  }
+
+  .right-content p {
+    font-size: 1.6rem;
+  }
+
+  .popup-form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.8rem 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .popup-right {
+    padding: 0 1.6rem;
+  }
+
+  .popup-content {
+    height: 40rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .right-content h1 {
+    font-size: 3rem;
+  }
+
+  .right-content p {
+    font-size: 1.4rem;
+  }
+
+  .popup-form {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin-bottom: 1.3rem;
+  }
+
+  .right-content a:link,
+  .right-content a:visited {
+    padding: 1.5rem 3rem;
+  }
+
+  .popup-close {
+    top: 1rem;
+    right: 1rem;
+    padding: 1.3rem;
   }
 }
 </style>
