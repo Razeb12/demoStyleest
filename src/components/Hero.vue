@@ -14,7 +14,11 @@
                     <button>shop women's</button>
                   </div>
                 </div>
-                <img src="../assets/banner_1.png" class="special_01" alt="" />
+                <img
+                  src="../assets/PhotoRoom-20210213_121200.png"
+                  class="special_01"
+                  alt=""
+                />
               </div>
             </li>
 
@@ -217,7 +221,7 @@ export default {
   background-color: #555;
   border: 1px solid var(--black);
   outline: none;
-  padding: 1.3rem 1.5rem;
+  padding: 1.1rem 1.5rem;
   border-radius: 50%;
   font-size: 1.6rem;
   color: var(--white);
@@ -245,7 +249,10 @@ export default {
   right: 5%;
 }
 
+/********Media Queries*******/
+
 @media screen and (min-width: 1920px) {
+
   .hero,
   .glide__hero,
   .banner {
@@ -254,58 +261,150 @@ export default {
     width: 100%;
     background-color: var(--grey-alt);
   }
-  /* @media screen and (max-width: 480px){
- .banner img.special_01 {
-  width:50rem;
-  right: 12%;
-}
-.banner img.special_02 {
-  width:85rem;
-  right: 12%;
-}
-.banner img.special_03 {
-  width:85rem;
-  right: 12%;
-}
-} */
-
   .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(25%, -50%);
+    left: 7%;
+  }
+  .banner-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+  }
+  .banner-content h3 {
+    font-size: 1.8rem;
   }
   .banner img.special_01 {
-    width: 85rem;
-    right: 12%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 95rem;
   }
+
   .banner img.special_02 {
-    width: 85rem;
-    right: 12%;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100rem;
   }
   .banner img.special_03 {
-    width: 85rem;
-    right: 12%;
+    left: 65%;
+    transform: translateX(-50%);
+    width: 100rem;
   }
 }
-@media only screen and (max-width: 1260px) {
+@media screen and (min-width: 1840px) {
+
   .hero,
   .glide__hero,
   .banner {
-    height: 90vh;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background-color: var(--grey-alt);
+  }
+  .banner-content {
+    left: 7%;
+  }
+  .banner-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+  }
+  .banner-content h3 {
+    font-size: 1.8rem;
+  }
+  .banner img.special_01 {
+    left: 70%;
+    transform: translateX(-50%);
+    width: 85rem;
+  }
+
+  .banner img.special_02 {
+    left: 65%;
+    transform: translateX(-50%);
+    width: 85rem;
+  }
+  .banner img.special_03 {
+    left: 65%;
+    transform: translateX(-50%);
+    width: 85rem;
+  }
+}
+@media (min-width: 1366px) and (max-width: 1366px) {
+  .banner-content {
+    left: 4%;
+  }
+  .banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  .banner-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero,
+  .glide__hero,
+  .banner {
+    position: relative;
+    height: 45vh;
+    width: 100%;
+    background-color: var(--grey-alt);
+  }
+  .banner img.special_01 {
+    left: 75%;
+    transform: translateX(-50%);
+    width: 60rem;
+  }
+
+  .banner img.special_02 {
+    left: 75%;
+    transform: translateX(-50%);
+    width: 60rem;
+  }
+  .banner img.special_03 {
+    left: 75%;
+    transform: translateX(-50%);
+    width: 60rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero,
+  .glide__hero,
+  .banner {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background-color: var(--grey-alt);
+  }
+  .banner-content {
+    width: 90%;
+  }
+  .banner-content {
+    width: 60%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
   }
 
   .banner img.special_01 {
-    width: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40rem;
   }
+
   .banner img.special_02 {
-    width: 70rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40rem;
   }
   .banner img.special_03 {
-    width: 70rem;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 40rem;
   }
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 767px) {
   .hero,
   .glide__hero,
   .banner {
@@ -314,15 +413,8 @@ export default {
     width: 100%;
     background-color: var(--grey-alt);
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .hero,
-    .glide__hero,
-    .banner {
-      position: relative;
-      height: 45vh;
-      width: 100%;
-      background-color: var(--grey-alt);
-    }
+  .banner-content {
+    width: 90%;
   }
   .banner-content {
     width: 60%;
@@ -349,38 +441,6 @@ export default {
     width: 40rem;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  .banner-content {
-    width: 90%;
-  }
-}
-@media (min-width: 360px) and (max-width: 360px) {
-  .hero,
-  .glide__hero,
-  .banner {
-    position: relative;
-    height: 70vh;
-    width: 100%;
-    background-color: var(--grey-alt);
-  }
-  .banner img.special_01 {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30rem;
-  }
-
-  .banner img.special_02 {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30rem;
-  }
-  .banner img.special_03 {
-    left: 55%;
-    transform: translateX(-50%);
-    width: 30rem;
-  }
-}
 @media only screen and (max-width: 568px) {
   .banner-content h1 {
     font-size: 3rem;
@@ -396,4 +456,80 @@ export default {
     font-size: 1.5rem;
   }
 }
+
+
+@media screen and (max-width: 480px) {
+  .banner img.special_01 {
+    width: 50rem;
+    right: 12%;
+  }
+  .banner img.special_02 {
+    width: 85rem;
+    right: 12%;
+  }
+  .banner img.special_03 {
+    width: 85rem;
+    right: 12%;
+  }
+}
+
+
+@media (max-width: 411px) and (max-width: 411px) {
+  .banner img.special_01 {
+    width: 28rem;
+  }
+  .banner img.special_02 {
+    width: 28rem;
+  }
+  .banner img.special_03 {
+    width: 28rem;
+  }
+}
+
+
+@media (min-width: 360px) and (max-width: 360px) {
+  .hero,
+  .glide__hero,
+  .banner {
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    background-color: var(--grey-alt);
+  }
+  .banner img.special_01 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27rem;
+  }
+
+  .banner img.special_02 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 27rem;
+  }
+  .banner img.special_03 {
+    left: 55%;
+    transform: translateX(-50%);
+    width: 27rem;
+  }
+}
+/* 
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(25%, -50%);
+}
+.banner img.special_01 {
+  width: 85rem;
+  right: 12%;
+}
+.banner img.special_02 {
+  width: 85rem;
+  right: 12%;
+}
+.banner img.special_03 {
+  width: 85rem;
+  right: 12%;
+} */
 </style>
