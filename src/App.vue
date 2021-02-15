@@ -35,6 +35,7 @@ export default {
   --grey-alt: #d1e2e9;
   --yellow: #ffd800;
   --green: #59b210;
+  --dark-color: #222;
 }
 
 *,
@@ -42,13 +43,14 @@ export default {
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 64.5%;
+  overflow-x:hidden ;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -58,7 +60,6 @@ body {
   font-weight: 400;
   color: var(--black);
   background-color: var(--white);
-  z-index: -1;
 }
 
 li,
