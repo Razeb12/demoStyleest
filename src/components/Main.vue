@@ -147,7 +147,7 @@
       </div>
     </div>
     <!-- PopUp -->
-    <div class="popup">
+    <!-- <div class="popup">
       <div class="popup-content">
         <div class="popup-close">
           <i class="fas fa-times"></i>
@@ -174,7 +174,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -209,18 +209,18 @@ export default {
     glide.mount();
 
     // PopUp
-    const popup = document.querySelector(".popup");
-    const closePopup = document.querySelector(".popup-close");
+    // const popup = document.querySelector(".popup");
+    // const closePopup = document.querySelector(".popup-close");
 
-    closePopup.addEventListener("click", () => {
-      popup.classList.remove("show");
-    });
+    // closePopup.addEventListener("click", () => {
+    //   popup.classList.remove("show");
+    // });
 
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        popup.classList.add("show");
-      }, 500);
-    });
+    // window.addEventListener("load", () => {
+    //   setTimeout(() => {
+    //     popup.classList.add("show");
+    //   }, 500);
+    // });
   },
 };
 </script>
@@ -595,7 +595,7 @@ Facility Media Query
 }
 
 /* ======= Popup ======== */
-.popup {
+/* .popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -806,5 +806,5 @@ Facility Media Query
     right: 1rem;
     padding: 1.3rem;
   }
-}
+} */
 </style>
