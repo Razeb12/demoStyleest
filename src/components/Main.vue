@@ -409,17 +409,17 @@ hr {
 }
 
 @media screen and (min-width: 1920px) {
-  * {
+  /* * {
     padding: 0 12px;
-  }
+  } */
   .glide__arrow {
     top: -150px;
   }
 }
 @media screen and (min-width: 1366px) {
-  * {
+  /* * {
     padding: 0 14px;
-  }
+  } */
 }
 @media only screen and (max-width: 567px) {
   .brands li img {
