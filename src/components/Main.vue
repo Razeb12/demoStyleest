@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
       <div class="row pad">
         <div class="col-md-4 mt-5 pt-5">
           <div class="banner-content">
@@ -53,7 +53,7 @@
       </div>
     </div>
 
-    <div class="container mt-5 pt-5">
+    <div class="container-fluid mt-5 pt-5">
       <div class="row">
         <div class="col-md-6 mt-5">
           <img
@@ -113,7 +113,7 @@
       </figure>
     </section>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="facility section" id="facility">
         <div class="facility-contianer container">
           <div class="facility-box">
