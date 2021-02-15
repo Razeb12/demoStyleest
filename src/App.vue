@@ -43,7 +43,7 @@ export default {
 *::before {
   margin: 0;
   padding: 0;
-    overflow-x:hidden ;
+
 }
 
 html {
@@ -61,6 +61,7 @@ body {
   font-weight: 400;
   color: var(--black);
   background-color: var(--white);
+      overflow-x:hidden ;
   
 }
 
