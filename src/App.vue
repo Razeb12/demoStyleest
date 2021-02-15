@@ -43,14 +43,15 @@ export default {
 *::before {
   margin: 0;
   padding: 0;
+    overflow-x:hidden ;
 }
 
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 64.5%;
-  overflow-x:hidden ;
-  /* overflow-x: hidden; */
+
+
 }
 
 body {
@@ -60,6 +61,7 @@ body {
   font-weight: 400;
   color: var(--black);
   background-color: var(--white);
+  
 }
 
 li,
